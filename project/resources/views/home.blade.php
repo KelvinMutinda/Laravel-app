@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
-  
-<body>
 <x-layout>
-    <h3>Home page</h3>
+     @foreach ($chirps as $chirp)
+    <div class="main-content">
+       
+        <div class="welcome-card">
+            <h3>{{$chirp['author']}}</h3>
+            <p>{{$chirp['message']}}</p>
+            <a href="#">{{$chirp['time']}}</a>
+        </div>
+      
+    </div>
+      @endforeach
 </x-layout>
-</body>
-</html>
