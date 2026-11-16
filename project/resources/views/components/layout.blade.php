@@ -11,6 +11,7 @@
     <div class="navbar">
         <a href="#">Login</a>
         <a href="#">Login</a>
+        <a href="#">Create new account</a>
     </div>
     {{$slot}}
 
