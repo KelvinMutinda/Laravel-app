@@ -61,8 +61,12 @@ body {
 /* Main Content Area */
 .main-content {
     display: flex;
+    flex-direction: column;
+    margin:20px;
     justify-content: center;
+    align-items: center;
     padding: 4rem 1rem;
+   
 }
 
 /* The white card in the middle */
@@ -71,6 +75,7 @@ body {
     padding: 2rem;
     border-radius: 8px;
     width: 100%;
+    margin:10px;
     max-width: 600px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
@@ -100,4 +105,270 @@ body {
 h3.red-test {
     color: red;
     font-size: 40px;
+}
+/* Center the main content */
+.main-content {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Title */
+.page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+/* The Form */
+.chirp-form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+.chirp-form textarea {
+    width: 100%;
+    border: 1px solid #ccc; /* Darker border like the screenshot */
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: none;
+    height: 100px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.chirp-form textarea:focus {
+    border-color: #000;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+}
+
+.chirp-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chirp-form button:hover {
+    background-color: #333;
+}
+
+/* The Chirp Cards */
+.chirp-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* The blue circle avatar */
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #0ea5e9; /* The blue from the screenshot */
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Layout inside the card */
+.chirp-content {
+    flex-grow: 1;
+}
+
+.chirp-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.chirp-header strong {
+    color: #111;
+    font-size: 0.95rem;
+}
+
+.chirp-header .time {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.chirp-content p {
+    color: #374151;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+/* Chirp Actions (Edit/Delete) */
+.chirp-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.chirp-actions form {
+    margin: 0; /* Removes default form margin */
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.btn-edit {
+    color: #3b82f6; /* Blue */
+}
+
+.btn-edit:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.btn-delete {
+    color: #ef4444; /* Red */
+}
+
+.btn-delete:hover {
+    color: #dc2626;
+    text-decoration: underline;
+}
+/* Register Page Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust based on your navbar height */
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+/* The White Card */
+.register-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+}
+
+.register-card h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+/* Form Inputs */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.register-form input:focus {
+    border-color: #000;
+}
+
+/* Submit Button */
+.btn-register {
+    background-color: #000;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.btn-register:hover {
+    background-color: #333;
+}
+
+/* Divider (OR) */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #6b7280;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.divider::before {
+    margin-right: .5em;
+}
+
+.divider::after {
+    margin-left: .5em;
+}
+
+/* Footer Link */
+.login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.login-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }
